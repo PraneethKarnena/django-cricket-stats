@@ -15,27 +15,27 @@ class TeamModel(models.Model):
         return f'{self.name} - {self.club_state}'
 
 
-# class PlayerModel(models.Model):
-#     """
-#     Database table for info of the player.
-#     Contains individual stats and details of the player.
-#     """
+class PlayerModel(models.Model):
+    """
+    Database table for info of the player.
+    Contains individual stats and details of the player.
+    """
 
-#     first_name = models.CharField(max_length=255, null=False, blank=False)
-#     last_name = models.CharField(max_length=255, null=False, blank=False)
+    first_name = models.CharField(max_length=255, null=False, blank=False)
+    last_name = models.CharField(max_length=255, null=False, blank=False)
 
-#     image = models.ImageField(null=False, blank=False)
-#     jersey_num = models.PositiveSmallIntegerField(null=False, blank=False)
-#     country = models.CharField(max_length=255, null=False, blank=False)
+    image = models.ImageField(null=False, blank=False)
+    jersey_num = models.PositiveSmallIntegerField(null=False, blank=False)
+    country = models.CharField(max_length=255, null=False, blank=False)
 
-#     matches = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
-#     runs = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
-#     highest_score = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
-#     fifties = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
-#     hundreds = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
+    matches = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
+    runs = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
+    highest_score = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
+    fifties = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
+    hundreds = models.PositiveSmallIntegerField(default=0, null=False, blank=False)
 
-#     team = models.ForeignKey(TeamModel, on_delete=models.CASCADE, null=False, blank=False)
+    team = models.ForeignKey(TeamModel, on_delete=models.CASCADE, null=False, blank=False)
 
-#     def __str__(self):
-#         return f''
+    def __str__(self):
+        return f''
 
