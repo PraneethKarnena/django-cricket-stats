@@ -37,5 +37,5 @@ class PlayerModel(models.Model):
     team = models.ForeignKey(TeamModel, on_delete=models.CASCADE, null=False, blank=False)
 
     def __str__(self):
-        return f''
+        return f'{self.first_name} {self.last_name} - {self.team.name}'
 
