@@ -14,7 +14,7 @@
     <div class="row mt-3">
         <div class="col-lg-2"></div>
         <div class="col-lg-8 text-center">
-            <h1>Cricket Stats</h1>
+            <h1><a href="/">Cricket Stats</a></h1>
         </div>
     </div>
 
@@ -40,7 +40,7 @@
                                     src="{{ player.image.url }}" alt=""></td>
                             <td>{{ player.first_name }} {{ player.last_name }}</td>
                             <td>{{ player.country }}</td>
-                            <td><a href="/player-stats/{{ team.id }}/" class="btn btn-primary">View Stats</a></td>
+                            <td><a href="/player-stats/{{ player.id }}/" class="btn btn-primary">View Stats</a></td>
                         </tr>
                     {% endfor %}
                 </tbody>
