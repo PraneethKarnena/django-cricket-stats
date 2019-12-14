@@ -54,7 +54,7 @@ class MatchModel(models.Model):
         ('PLD', 'Played')
     )
     status = models.CharField(max_length=3, null=False, blank=False, default='NTP')
-    winner = models.ForeignKey(TeamModel, on_delete=models.CASCADE, null=False, blank=False)
+    winner = models.ForeignKey(TeamModel, on_delete=models.CASCADE, null=True, blank=True)
     time = models.DateTimeField(null=False, blank=False)
 
     def __str__(self):
