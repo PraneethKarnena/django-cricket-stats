@@ -30,7 +30,6 @@
                         <th scope="col">Name</th>
                         <th scope="col">Club State</th>
                         <th scope="col">Players</th>
-                        <th scope="col">Stats</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,7 +41,6 @@
                             <td>{{ team.name }}</td>
                             <td>{{ team.club_state }}</td>
                             <td><a href="/team-players/{{ team.id }}/" class="btn btn-primary">View Players</a></td>
-                            <td><a href="/team-stats/{{ team.id }}/" class="btn btn-secondary">View Stats</a></td>
                         </tr>
                     {% endfor %}
                 </tbody>
