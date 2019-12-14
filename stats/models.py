@@ -53,7 +53,7 @@ class MatchModel(models.Model):
         ('CAN', 'Cancelled'),
         ('PLD', 'Played')
     )
-    status = models.CharField(max_length=3, null=False, blank=False, default='NTP')
+    status = models.CharField(max_length=3, choices=STATUS_CHOICES, null=False, blank=False, default='NTP')
     winner = models.ForeignKey(TeamModel, on_delete=models.CASCADE, null=True, blank=True)
     time = models.DateTimeField(null=False, blank=False)
 
