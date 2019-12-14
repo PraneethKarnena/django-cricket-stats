@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cricket Stats</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="row mt-3">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+            <h1><a href="/">Cricket Stats</a></h1>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h2>Player Stats</h2>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Detail</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Image</th>
+                        <td><img class="img-fluid" style="max-width: 100px; max-height: 100px;" src="{{ player.image.url }}" alt="" class=""></td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ player.first_name }} {{ player.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Jersey Number</th>
+                        <td>{{ player.jersey_num }}</td>
+                    </tr>
+                    <tr>
+                        <th>Country</th>
+                        <td>{{ player.country }}</td>
+                    </tr>
+                    <tr>
+                        <th>Matches</th>
+                        <td>{{ player.matches }}</td>
+                    </tr>
+                    <tr>
+                        <th>Runs</th>
+                        <td>{{ player.runs }}</td>
+                    </tr>
+                    <tr>
+                        <th>Highest Score</th>
+                        <td>{{ player.highest_score }}</td>
+                    </tr>
+                    <tr>
+                        <th>Fifties</th>
+                        <td>{{ player.fifties }}</td>
+                    </tr>
+                    <tr>
+                        <th>Hundreds</th>
+                        <td>{{ player.hundreds }}</td>
+                    </tr>
+                    <tr>
+                        <th>Team</th>
+                        <td>{{ player.team }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
